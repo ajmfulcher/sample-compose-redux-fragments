@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rootDestination">
+
+    <fragment
+        android:id="@+id/rootDestination"
+        android:name="dev.andrewfulcher.compose_redux_fragments.fragment.MainFragment"
+        android:label="RootDestination" >
+        <action
+            android:id="@+id/action_mainFragment_self"
+            app:destination="@id/stackedDestination"
+            app:enterAnim="@anim/activity_open_enter"
+            app:exitAnim="@anim/activity_open_exit"
+            app:popEnterAnim="@anim/activity_close_enter"
+            app:popExitAnim="@anim/activity_close_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stackedDestination"
+        android:name="dev.andrewfulcher.compose_redux_fragments.fragment.MainFragment"
+        android:label="StackedDestination" >
+        <action
+            android:id="@+id/action_mainFragment_self"
+            app:destination="@id/stackedDestination"
+            app:enterAnim="@anim/activity_open_enter"
+            app:exitAnim="@anim/activity_open_exit"
+            app:popEnterAnim="@anim/activity_close_enter"
+            app:popExitAnim="@anim/activity_close_exit" />
+    </fragment>
+</navigation>
