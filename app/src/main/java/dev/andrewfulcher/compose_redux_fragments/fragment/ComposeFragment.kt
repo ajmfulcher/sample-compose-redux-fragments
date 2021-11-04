@@ -20,8 +20,8 @@ abstract class ComposeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_compose, container, false).apply {
-            findViewById<Toolbar>(R.id.main_fragment_toolbar).setUp()
-            findViewById<ComposeView>(R.id.main_fragment_compose_view).apply {
+            findViewById<Toolbar>(R.id.compose_fragment_toolbar).setUp()
+            findViewById<ComposeView>(R.id.compose_fragment_compose_view).apply {
                 setContent { Compose() }
             }
         }

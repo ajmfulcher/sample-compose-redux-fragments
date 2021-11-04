@@ -15,6 +15,10 @@
             app:exitAnim="@anim/activity_open_exit"
             app:popEnterAnim="@anim/activity_close_enter"
             app:popExitAnim="@anim/activity_close_exit" />
+        <argument
+            android:name="parentTapCount"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 
     <fragment
@@ -28,5 +32,9 @@
             app:exitAnim="@anim/activity_open_exit"
             app:popEnterAnim="@anim/activity_close_enter"
             app:popExitAnim="@anim/activity_close_exit" />
+        <argument
+            android:name="parentTapCount"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
 </navigation>

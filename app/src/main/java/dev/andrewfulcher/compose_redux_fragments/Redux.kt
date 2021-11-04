@@ -44,7 +44,9 @@ class Store: ViewModel() {
 
 fun Fragment.dispatch(store: Store, action: Action) {
     when (action) {
-        is Action.PushStack -> findNavController().navigate(R.id.action_mainFragment_self)
+        is Action.PushStack -> {
+            findNavController().navigate(R.id.action_mainFragment_self)
+        }
         else -> store.dispatch(action)
     }
 }
